@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body { 
+  padding: 5px 3px 0px 5px;
+  overflow-wrap: break-word;
+}
+
+header {
+  width: 98vw;
+  height: 98vh;
+  background-image: linear-gradient(
+      to right bottom,
+      #000000b0,
+      rgba(209, 220, 238, 0.13)
+    ),
+    url(/images/background.jpg);
+  /* background-color: #151414; */
+  position: relative;
+  clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 3% 100%);
+  background-size: cover;
+  background-position: bottom;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: 100% 100%;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+
+  width: 114px;
+  height: 67px;
+  background: cover;
+  border: solid;
+  border-radius: 10px;
+  border-color: rgb(219, 168, 0);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.homehead{
+z-index: 9999999999999999999999999999;
+
+
+}
+.home {
+  /* text-align: center; */
+  font-size: 24px;
+  font-family: "Goblin One", cursive;
+  padding: 18px;
+  position: fixed;
+left: 20rem;
+  z-index: 9999999999999;
+  display: inline-flex;
+}
+.home a {
+  color: rgb(219, 168, 0);
+  line-height: 2em;
+  
+  text-decoration: none;
+  padding: 81px;
+  margin: -54px;
+  
+  z-index: 99999;
+}
+
+.login {
+  width: 150px;
+  position: absolute;
+  left: 88%;
+  top: 9%;
+  font-size: 17px;
+  font-family: "Goblin One", cursive;
+  text-decoration: none;
+  background: rgb(219, 168, 0);
+  border-radius: 80px;
+  text-align: center;
+}
+.login a {
+  color: currentColor;
+  text-decoration: none;
+
+  display: inline-block;
+}
+.logo:hover {
+  transform: translateY(-4px);
+  border-color: crimson;
+  width: 130px;
+  height: 80px;
+  /* box-shadow: 5px 2px 2px rgb(219, 168, 0); */
+}
+.login:hover {
+  transform: translateX(10px);
+  transform: scale(1.5);
+}
+.login:active {
+  background-color: crimson;
+}
+
+.con {
+  display: flex;
+
+  position: absolute;
+  top: 26%;
+  width: 100%;
+  height: 75%;
+}
+#left {
+  width: 50%;
+}
+#right {
+  font-family: "Pirata One", cursive;
+  font-size: 40px;
+  width: 50%;
+  text-align: center;
+  margin-top: 159px;
+  color: rgba(255, 144, 25);
+}
+#left img {
+  width: 38rem;
+  height: 25rem;
+  margin: 3rem;
+}
+#menu {
+  left: 100px;
+  float: inline-end;
+  margin-top: 110px;
+}
+.btn:link,
+.btn:visited {
+  background-color: rgba(255, 144, 25);
+  text-decoration: none;
+  font-family: "Goblin One", cursive;
+  font-size: 20px;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+}
+.btn:hover {
+  transform: translateY(5px) scale(1.2);
+}
+.btn:active {
+  transform: translate(2px) scale(0.9);
+  background-color: crimson;
+  color: black;
+}
+.second {
+  background-color: rgba(255, 127, 80, 0.37);
+  width: 98vw;
+  height: 98vh;
+  clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+  z-index: 99;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: white; */
+  padding-top: 5rem;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+ .spehead {
+  text-align: center;
+  background-color: darkgreen;
+  padding-top: 20px; 
+   font-family: "Goblin One", cursive;
+}
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 40px;
+  text-align: center;
+  grid-template-areas: "image" "text" "stats";
+  font-family: cursive;
+  border-radius: 18px;
+  background: wheat;
+}
+#one{
+  grid-area: image;
+ background-image: url(/images/d1.jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-text { 
+grid-area: text;
+margin-top: 25px;
+
+}
+.card-text .date{
+  color: chocolate;
+   font-size: 20px;
+}
+.card-text .add{
+  padding-left: 220px;
+display: block;
+text-decoration: none;
+}
+.card-text .add a {
+text-decoration: none;
+background-color: rgb(219, 168, 0);
+background-size: 20px;
+}
+.card-text .add a :after{
+content: 'Add';
+display: block;
+
+}
+.card-text .add a:active:after{
+
+  content: 'Added';display: block;
+  background-color: green;
+}
+
+.card-image .nonveg{
+background: rgba(255, 144, 25);
+border-radius:100px ;
+float: inline-start;
+font-family:"Goblin One", cursive;
+font-size: small;
+}
+.card-text .dis{
+color: palevioletred;
+
+
+}
+.card-stats {
+  grid-area: stats;
+  background-color:rgb(18, 110, 163);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}  
+.card-stats .price{
+
+  text-align: center;
+  font-size: 25px;
+}
+.card:hover{
+transform: scale(1.1);
+box box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+
+}
+ #two{
+  grid-area: image;
+ background-image: url(/images/d2.jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+ #three{
+  grid-area: image;
+ background-image: url(/images/d3.jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+#four{
+  grid-area: image;
+ background-image: url(/images/4.jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.reco{
+  background-color: rgba(255, 127, 80, 0.37);
+  width: 98vw;
+  height: 100vh;
+  clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 3% 100%);
+}
+#heading{
+background-color: black;
+color: blanchedalmond;
+text-align: center;
+font size: 40px;
+}
+#our_reco{
+font-size:x-large;
+
+  
+}
+.search{
+  margin-top: 20px;
+  margin-left: 45%;
+  
+  width: 11rem;
+  height: 3rem;
+  margin-inline: 42rem;
+  display: flex;
+  transition: all ;
+}
+
+.search-text{
+
+
+padding: 1rem;
+border-radius: 36px;
+outline: none;
+}
+.search-logo{
+  padding-top: 16px;
+transform: scale(2.5);
+  padding-left: 12px;
+
+
+}
+.search-logo:hover{
+  transform: scale(3);
+  
+color: blue;
+}
+.search :hover{
+    
+transform: translateY(4px);
+
+}
+#eight{
+  grid-area: image;
+ background-image: url(/images/4\ \(1\).jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;}
+  #five{
+    grid-area: image;
+   background-image: url(/images/4\ \(4\).jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;}
+
+#six{
+  grid-area: image;
+ background-image: url(/images/4\ \(3\).jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;}
+  #seven{
+    grid-area: image;
+   background-image: url(/images/4\ \(2\).jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;}
+.review{
+width: 98vw;
+height: 99vh;
+background-color: burlywood;
+clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+}
+.reviewheading{
+width: 100vw;
+background-color: black;
+text-align: center;
+color: white;
+height:10vh ;
+}
+.reviewhead{
+
+font-size: 3rem;
+justify-content: center;
+
+}
+.reviewrow{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding:4rem;
+gap: 5rem;
+}
+.reviewcard{
+display: grid;
+grid-template-columns: 20rem;
+grid-template-rows: 10rem 5rem 5rem ;
+grid-template-areas: "image" "name" "review";
+background-color: violet;
+border-radius: 1rem;
+text-align: center;
+}
+#nine{
+  grid-area: image;
+ background-image: url(/images/sundar-pichai.jpg);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;}
+  #ten{
+    grid-area: image;
+   background-image: url(/images/kgp2.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;}
+
+    #eleven{
+      grid-area: image;
+     background-image: url(/images/kgpdire.jpg);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-size: cover;}
+
+
+
+
+.reviewcard-name{
+font-size: x-large;
+background-color: yellow;
+
+}
+.reviewcard-rate{
+font-size: large;
+}
+.form{
+text-transform: uppercase;
+/* background-color: teal; */
+display: block;
+padding-left: 40%;
+width: 98vw;
+}
+.formhead{
+font-size: x-large;
+padding-left: 7rem;
+
+}
+.formname{
+
+ 
+}
+#form-text1{
+  padding-left: 200px;
+  padding-top: 10px;
+  margin-left: 47px;  border-radius: 50px;
+  }
+  #form-text2{
+    padding-left: 200px;
+    padding-top: 10px;
+    margin-left: 40px;  border-radius: 50px;
+    }
+    #form-text3{
+      padding-left: 200px;
+      padding-top: 12px;
+      margin-left: 29px;
+      border-radius: 50px;
+      }
+      .formbtn{
+/* background-color: teal; */
+padding-top: 20px;
+padding-left: 50%;        
+      }
+footer{
+width: 98vw;
+background-color:rgb(114, 106, 106);
+height: 40vh;
+clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 3% 100%);
+
+      }
+     .footerlogo{
+     
+display: flex;
+justify-content: center;
+gap: 5rem
+;
+/* scale: 5; */
+padding-top: 3rem
+;
+
+    } 
+    .instalogo{
+     transform: scale(5);
+      
+      
+      }
+      .fblogo{
+       transform: scale(5);
+        
+        
+        }
+        .youtubelogo{
+          transform: scale(5);
+        
+          
+          }
+
+    
+.instalogo:hover{
+transform: scale(5.5);
+
+
+}
+.fblogo:hover{
+  transform: scale(5.5);
+  
+  
+  }
+  .youtubelogo:hover{
+    transform: scale(5.5);
+    
+    }
+    .term{
+display: block;
+text-align: center;
+padding-top: 3rem;
+color: azure;
+text-decoration: none;
+
+    }
+    .term a{
+
+      color: rgb(241, 9, 20);
+text-decoration: none;
+    }
+    .copy{
+display: block;
+text-align: center;
+
+    }
+    .card-text h3{
+font-family:"Goblin One", cursive; 
+      color: rgb(190, 5, 5);
+    }
+    .card-text{
+      font-size: 20px;
+    }
+    .reviewcard:hover{
+transform: scale(1.2);
+
+    }
+ html{
+
+  scroll-behavior: smooth;
+ }
+ 
